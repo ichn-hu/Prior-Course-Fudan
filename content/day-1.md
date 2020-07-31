@@ -16,9 +16,10 @@
 所谓的程序，就是一系列明确的、可以被计算机理解的语句组成的文本。现在有很多编程游戏，比如有一个叫 lightbot 的（手机上可以下载安装玩玩哦~）。
 在这个游戏里面，你可以操作一个机器人，用给定的基本操作（比如前进、转向、重复等），组合出一套"程序"，从而让机器人行动起来达成游戏目标。
 
+![](static/assets/lightbot.png)
 <center>
 <figure>
-  <img src="/static/assets/lightbot.png"
+  <img class="inserted" src="/static/assets/lightbot.png"
     height="400"
     alt="lightbot 编程游戏">
   <figcaption style="color: grey">lightbot 编程游戏</figcaption>
@@ -31,9 +32,10 @@
 
 最早的时候，受制于电子技术，计算机是一个占据很多间房子的庞然大物，而程序的逻辑需要通过拔插电线组合出来（那个时候其实还没有指令的概念，即没有 stored-program），这时的编程是一个十分需要细心和耐心的工作（当然现在的编程也需要）的工作，因此早期的程序员都是女性（感兴趣可以读读 [Programming the ENIAC](http://www.columbia.edu/cu/computinghistory/eniac.html) 还有 [Untold History of AI: Invisible Women Programmed America's First Electronic Computer](https://spectrum.ieee.org/tech-talk/tech-history/dawn-of-electronics/untold-history-of-ai-invisible-woman-programmed-americas-first-electronic-computer)）。
 
+![](static/assets/eniac_programming.jpeg)
 <center>
 <figure>
-  <img src="/static/assets/eniac_programming.jpeg"
+  <img class="inserted" src="/static/assets/eniac_programming.jpeg"
     height="400"
     alt="">
   <figcaption style="color: grey">最早的计算机 ENIAC 和最早的一批程序员</figcaption>
@@ -93,9 +95,10 @@
 
 使用最基本的指令进行编程并不是直接写 01 二进制（虽然并不是不行，只是太麻烦以至于十分困难），而是使用汇编语言（assembly language）进行。汇编语言使用更容易记忆的方式来写指令，比如上面的 0000 可以用 `inc i` 代替，0011 可以用 `mov R, Si` 来表示，这样写出来的程序比 01 串更加具有可读性，对程序员来说也更加友好。
 
+![](static/assets/X86_Assembly_Listing_for_ComplexAdd.png)
 <center>
 <figure>
-  <img src="/static/assets/X86_Assembly_Listing_for_ComplexAdd.png"
+  <img class="inserted" src="/static/assets/X86_Assembly_Listing_for_ComplexAdd.png"
     height="400"
     alt="lightbot 编程游戏">
   <figcaption style="color: grey">比如说这里就是 x86 汇编写出来的计算复数相加的程序，注意在计算机世界中，我们<a href="https://www.zhihu.com/topic/19823026/intro">更常用 16 进制</a>来表示数（因为比一大串 01 更加简练）。最左边一列表示每一条指令在程序文件中的位置，我们可以不用管，中间一列就是指令的 16 进制表示，这一列才是 CPU 可以识别、执行的，而最右边一列才是由程序员写的汇编程序。可以想象，如果编程是让程序员直接写中间那一列是多么残忍啊！</figcaption>
@@ -119,9 +122,10 @@ C 语言编译器本身也是一个程序，他把你写的 C 语言程序翻译
 2. 你需要“调用”编译器去编译你的程序。最简单的方法就是用命令行（command line）去指挥编译器，指定一个程序文本文件，让编译器去编译它！
 3. 你写的程序得是合法的。合法的意思是，符合 C 语言的语法和规范，这正是我们要教你的。如果程序不合法，那么编译器会向你抱怨（complain），形式是警告（warning）或者错误（error）。这个时候不要感到害怕和无助，先仔细读一读编译器输出的内容，这样可以排除掉非常多粗心造成的错误。
 
+![](static/assets/0warning0error.jpeg)
 <center>
 <figure>
-  <img src="/static/assets/0warning0error.jpeg"
+  <img class="inserted" src="/static/assets/0warning0error.jpeg"
     height="400"
     alt="lightbot 编程游戏">
   <figcaption style="color: grey">如果上述事情你都做对了，那么你就能看到编译器给你点的赞！（如果是用 IDE 的话可以见到，而命令行不会，因为命令行的逻辑是如果没有错误则不会有任何输出）</figcaption>
@@ -142,6 +146,13 @@ C 语言编译器本身也是一个程序，他把你写的 C 语言程序翻译
 
 使用 Windows 的同学看过来！
 
+#### Dev C++
+
+教材上给出的 Dev C++ 是一个轻量级的集成开发环境（IDE，Integrated Development Environment），顾名思义，它里面集成了一个 TDM-GCC 编译器。安装 Dev C++ 是在 Windows 上获得 C 语言编译器的最方便的方法之一，而且 Dev C++ 本身也可以作为代码编辑工具，对于入门来说比较友好。
+
+除了在教材给出的 [sourceforge](https://sourceforge.net/projects/orwelldevcpp/) 上下载（非常慢），我们在国内服务器上也维护了一个镜像，点击[这里]()光速下载！
+
+除了 Dev C++，Code::Blocks 也是一个非常推荐的初学者友好的 IDE（下载更快），如果你想用一个比 Dev C++ 更新的 IDE，点[这里](https://www.fosshub.com/Code-Blocks.html?dwl=codeblocks-20.03mingw-setup.exe)下载。
 
 
 ## 你的第一个程序
@@ -153,3 +164,17 @@ C 语言编译器本身也是一个程序，他把你写的 C 语言程序翻译
 [^1]: 互联网史——曼哈顿计划、亚里士多德和原子弹 https://zhuanlan.zhihu.com/p/76149568
 [^2]: 这里对于汇编语言来说，其实编译的过程本身叫做 assemble 而不是 compile，但道理是一样的
 [^3]: 不过了解这些底层原理对学会写程序是有益的，而且很有趣哇~
+
+<script>
+let imgs = document.querySelectorAll("img");
+for (const img of imgs) {
+    console.log(img);
+    if (img.classList.contains("inserted")) {
+        console.log("has img", img, img.classList.length);
+        const actualImg = img.parentElement.parentElement.previousSibling.childNodes[0];
+        const src = actualImg.src;
+        img.src = src;
+        actualImg.remove();
+    }
+}
+</script>
